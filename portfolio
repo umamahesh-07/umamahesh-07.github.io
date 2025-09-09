@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adepu Uma Mahesh | Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f6fa;
+      color: #2f3640;
+      line-height: 1.6;
+    }
+
+    /* Animated gradient background */
+    header {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.6rem;
+      background: #ffffff;
+      color: #2f3640;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.4s;
+    }
+
+    .resume-btn:hover {
+      background: #00a8ff;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(47, 54, 64, 0.95);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #00a8ff;
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+      color: #6a11cb;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      width: 70px;
+      height: 4px;
+      background: #2575fc;
+      display: block;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent);
+      transition: 0.5s;
+    }
+
+    .card:hover::before {
+      left: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      background: #2f3640;
+      color: white;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #00a8ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 768px) {
+      header h1 {font-size: 2.2rem;}
+      header p {font-size: 1rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Adepu Uma Mahesh</h1>
+    <p>Aspiring Full Stack Developer | Computer Science Undergraduate</p>
+    <a href="UmaMahesh_Resume.pdf" class="resume-btn" download>📄 Download Resume</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:850px; margin:auto;">
+      Recent Computer Science Engineering graduate with a strong foundation in programming, web technologies, and data structures. 
+      Skilled in Python, Flask, and MySQL with hands-on experience in AI-based and full stack development projects. 
+      Passionate about problem-solving, building impactful solutions, and contributing to dynamic team environments.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="card">Python, C++</div>
+      <div class="card">HTML5, CSS3, JavaScript</div>
+      <div class="card">Flask, Django</div>
+      <div class="card">MySQL, SQL</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Traffic Analysis for Vehicle Counting</h3>
+        <p>Developed a real-time traffic analysis system using Python, OpenCV, and Flask to detect and count vehicles, integrating machine learning techniques for improved accuracy.</p>
+        <a href="https://github.com/umamahesh-07" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Ticketing Tool & Project Tracking System</h3>
+        <p>Built a full-stack project management and ticketing tool using HTML, CSS, JavaScript, Flask/Django, and MySQL, enabling efficient collaboration and real-time tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p style="text-align:center;">
+      <strong>Parul University</strong><br>
+      Bachelor of Technology in Computer Science and Engineering<br>
+      2021 – 2025 | Vadodara, Gujarat
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Codegnan IT Solutions</h3>
+        <p>Python Full Stack Developer Training Program (May 2025 – Present)<br>
+        Gained hands-on experience with Python, Flask/Django, REST APIs, MySQL, and responsive UI development.</p>
+      </div>
+      <div class="card">
+        <h3>Inspire Leap Company</h3>
+        <p>Web Development Intern (Dec 2024 – Mar 2025)<br>
+        Contributed to responsive web applications using HTML, CSS, JavaScript, React.js, and API integration, while resolving 15+ frontend bugs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="skills">
+      <div class="card">Networking Essentials – Cisco Networking Academy (Feb 2023)</div>
+      <div class="card">Web Development Intern – Inspire Leap Company (Apr 2024)</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">Email: <a href="mailto:umamaheshadepu75@gmail.com">umamaheshadepu75@gmail.com</a></p>
+    <p style="text-align:center;">LinkedIn: <a href="https://linkedin.com/in/adepu-uma-mahesh-a06188244" target="_blank">linkedin.com/in/adepu-uma-mahesh</a></p>
+    <p style="text-align:center;">GitHub: <a href="https://github.com/umamahesh-07" target="_blank">github.com/umamahesh-07</a></p>
+    <p style="text-align:center;">Phone: +91 9392476205</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Adepu Uma Mahesh | Designed with professionalism and passion | <a href="#">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
